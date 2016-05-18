@@ -1,0 +1,92 @@
+@(message: String="Clicktable")
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Clicktable</title>
+<meta https-equiv="X-Frame-Options" content="allow">
+<link href=@routes.Assets.at("stylesheets/login.css") rel="stylesheet" type="text/css" />
+<link href=@routes.Assets.at("stylesheets/intlTelInput.css") rel="stylesheet" type="text/css" />
+<link href='http://fonts.googleapis.com/css?family=Rokkitt' rel='stylesheet' type='text/css'>
+<script src="http://code.jquery.com/jquery-latest.min.js" type="text/javascript"></script>
+<script type="text/javascript" id="rbox-loader-script">
+_rbox = { host_protocol:document.location.protocol, ready:function(cb){this.onready=cb;} };
+(function(d, e) {
+    var s, t, i, src=['/static/client-src-served/widget/31720/rbox_api.js', '/static/client-src-served/widget/31720/rbox_impl.js'];
+    t = d.getElementsByTagName(e); t=t[t.length - 1];
+    for(i=0; i<src.length; i++) {
+        s = d.createElement(e); s.src = _rbox.host_protocol + '//w.recruiterbox.com' + src[i];
+        t.parentNode.insertBefore(s, t.nextSibling);
+    }})(document, 'script');
+</script>
+
+<link href="https://cdn.desk.com/assets/widget_embed_191.css" media="screen" rel="stylesheet" type="text/css" />
+<!--If you already have fancybox on the page this script tag should be omitted-->
+<script src="https://cdn.desk.com/assets/widget_embed_libraries_191.js" type="text/javascript"></script>
+                        <script>
+                                // ********************************************************************************
+                                // This needs to be placed in the document body where you want the widget to render
+                                // ********************************************************************************
+                                new DESK.Widget({ 
+                                        version: 1, 
+                                        site: 'click.desk.com', 
+                                        port: '80', 
+                                        type: 'email', 
+                                        displayMode: 1,  //0 for popup, 1 for lightbox
+                                        features: {  
+                                        },  
+                                        fields: { 
+                                                ticket: { 
+                                                        // desc: &#x27;&#x27;,
+                                // labels_new: &#x27;&#x27;,
+                                // priority: &#x27;&#x27;,
+                                // subject: &#x27;&#x27;
+                                                }, 
+                                                interaction: { 
+                                                        // email: &#x27;&#x27;,
+                                // name: &#x27;&#x27;
+                                                }, 
+                                                email: { 
+                                                        //subject: '', 
+                                                        //body: '' 
+                                                }, 
+                                                customer: { 
+                                                        // company: &#x27;&#x27;,
+                                // desc: &#x27;&#x27;,
+                                // first_name: &#x27;&#x27;,
+                                // last_name: &#x27;&#x27;,
+                                // locale_code: &#x27;&#x27;,
+                                // title: &#x27;&#x27;
+                                                } 
+                                        } 
+                                }).render();
+                        </script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+</head>
+<body>
+<div id="login" class="wrap" style="display: block;">
+<!-- strat-contact-form -->	
+<div class="contact-form">
+<!-- start-form -->
+	<div class="contact_form" action="#" method="post" name="contact_form">
+		<h1>Clicktable</h1>
+		<div class="desc">
+            Table reservations, just a click away!<br/> Clicktable is a new technology for restaurants and food lovers that offers an online real-time restaurant reservation service.
+		</div>	
+	</div>
+<!-- end-form -->
+<!-- start-account -->
+<div class="account">
+    <div class="span"><a href="javascript:;" onclick="fbLogin()"><img src=@routes.Assets.at("images/facebook.png") alt=""/><i>Connect via Facebook</i><div class="clear"></div></a></div>	
+    <div class="span2"><a href="javascript:;" onclick="googleLogin()"><img src=@routes.Assets.at("images/gplus.png") alt=""/><i>Connect via Google</i><div class="clear"></div></a></div>
+</div>	
+<!-- end-account -->
+<div class="clear"></div>	
+</div>
+</div>
+</body>
+<script src="@routes.Assets.at("javascripts/facebook.js")" type="text/javascript"></script>
+<script src="@routes.Assets.at("javascripts/google.js")" type="text/javascript"></script>
+<script src="@routes.Assets.at("javascripts/register.js")" type="text/javascript"></script>
+</html>
